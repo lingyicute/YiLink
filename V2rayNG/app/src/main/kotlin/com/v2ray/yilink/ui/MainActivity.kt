@@ -682,17 +682,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             R.id.user_asset_setting -> {
                 startActivity(Intent(this, UserAssetActivity::class.java))
             }
-            R.id.feedback -> {
-                Utils.openUri(this, AppConfig.YiLinkIssues)
-            }
             R.id.promotion -> {
                 Utils.openUri(this, "${Utils.decode(AppConfig.promotionUrl)}?t=${System.currentTimeMillis()}")
             }
             R.id.logcat -> {
                 startActivity(Intent(this, LogcatActivity::class.java))
-            }
-            R.id.privacy_policy-> {
-                Utils.openUri(this, AppConfig.YiLinkPrivacyPolicy)
             }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
