@@ -36,7 +36,7 @@
 
 
     <application
-        android:name=".AngApplication"
+        android:name=".YilinkApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:banner="@mipmap/ic_banner"
@@ -122,7 +122,7 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="v2rayng"/>
+                <data android:scheme="yilink"/>
                 <data android:host="install-config"/>
                 <data android:host="install-sub"/>
             </intent-filter>
@@ -171,8 +171,8 @@
                     android:resource="@xml/app_widget_provider" />
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.v2ray.ang.action.widget.click" />
-                <action android:name="com.v2ray.ang.action.activity" />
+                <action android:name="com.v2ray.yilink.action.widget.click" />
+                <action android:name="com.v2ray.yilink.action.activity" />
             </intent-filter>
         </receiver>
 
