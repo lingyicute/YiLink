@@ -163,7 +163,7 @@
     <string name="summary_pref_confirm_remove">删除配置文件是否需要二次确认</string>
 
     <string name="title_pref_start_scan_immediate">立即启动扫码</string>
-    <string name="summary_pref_start_scan_immediate">使用扫码功能时直接打开摄像头\n不勾选则询问使用摄像头扫码还是选择相册里的图片</string>
+    <string name="summary_pref_start_scan_immediate">使用扫码功能时直接打开摄像头\n不勾选则询问使用摄像头扫码还是选择现有图片</string>
 
     <string name="title_pref_feedback">反馈</string>
     <string name="summary_pref_feedback">反馈改进或漏洞至 GitHub</string>
@@ -174,7 +174,7 @@
     <string name="summary_pref_promotion">项目仓库</string>
 
     <string name="title_pref_auto_update_subscription">自动更新订阅</string>
-    <string name="summary_pref_auto_update_subscription">在后台按一定时间间隔自动更新您的配置。受设备影响，此功能不一定总是有效。</string>
+    <string name="summary_pref_auto_update_subscription">在后台按一定时间间隔自动更新您的配置\n（受设备影响，此功能不一定总是有效）</string>
     <string name="title_pref_auto_update_interval">自动更新间隔（分钟，最小值15）</string>
 
     <string name="title_core_loglevel">日志级别</string>
