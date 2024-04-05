@@ -56,6 +56,17 @@ jobs:
         chmod 777 *
         sed -i 's/org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8/org.gradle.jvmargs=-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8/' ${{ github.workspace }}/V2rayNG/gradle.properties
         ./gradlew assembleDebug
+        
+    - name: Remove useless
+      run: |
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_riscv64.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_x86.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_x86_64.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_mips64.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_mips.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_armeabi.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_all.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.8.19_armeabi-v7a.apk
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
