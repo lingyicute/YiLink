@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name" translatable="false">YiLink</string>
     <string name="app_namech" translatable="false">YiLink 依链</string>
-    <string name="xyc">Made for My Best Xyc～</string>
+    <string name="xyc">Made for My best Xyc～</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
