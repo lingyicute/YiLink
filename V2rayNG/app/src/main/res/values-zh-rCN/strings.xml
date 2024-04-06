@@ -60,7 +60,7 @@
     <string name="server_lab_encryption">加密方式(encryption)</string>
     <string name="server_lab_flow">流控(flow)</string>
     <string name="server_lab_reserved">Reserved(可选)</string>
-    <string name="server_lab_local_address">本地地址(可选IPv4/IPv6，逗号隔开)</string>
+    <string name="server_lab_local_address">本地地址(可选IPv4/v6，逗号隔开)</string>
     <string name="server_lab_local_mtu">Mtu(可选，默认1420)</string>
     <string name="toast_success">成功</string>
     <string name="toast_failure">失败</string>
@@ -191,7 +191,7 @@
     <string name="title_del_duplicate_config">删除重复配置</string>
     <string name="title_del_invalid_config">删除无效配置(先测试，再点我)</string>
     <string name="title_export_all">导出全部(非自定义)配置至剪贴板</string>
-    <string name="title_sub_setting">订阅分组设置</string>
+    <string name="title_sub_setting">订阅分组</string>
     <string name="sub_setting_remarks">备注</string>
     <string name="sub_setting_url">可选地址(url)</string>
     <string name="sub_setting_enable">启用更新</string>
