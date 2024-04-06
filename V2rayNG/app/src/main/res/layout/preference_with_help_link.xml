@@ -7,5 +7,4 @@
         android:onClick="onModeHelpClicked"
         android:text="@string/title_mode_help"
         android:textAlignment="textStart"
-        android:textStyle="italic"
     tools:ignore="UsingOnClickInXml" />

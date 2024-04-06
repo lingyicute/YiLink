@@ -75,7 +75,7 @@ object AppConfig {
     const val YiLinkIssues = "https://github.com/lingyicute/YiLink/issues"
     const val YiLinkWikiMode = "https://github.com/lingyicute/YiLink/wiki/Mode"
     const val YiLinkPrivacyPolicy = "https://raw.githubusercontent.com/lingyicute/YiLink/master/CR.md"
-    const val promotionUrl = "aHR0cHM6Ly85LjIzNDQ1Ni54eXovYWJjLmh0bWw="
+    const val promotionUrl = "https://github.com/lingyicute/YiLink"
     const val geoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/"
 
     const val DNS_AGENT = "1.1.1.1"
