@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/yilink"
         android:gravity="center"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="@string/app_namech"
@@ -28,6 +29,7 @@
         android:gravity="center" 
         android:layout_marginTop="8dp"
         android:text="@string/xyc"
+        android:fontFamily="@font/xyc"
         android:textAppearance="@style/TextAppearance.AppCompat.Small" 
         android:textColor="@color/colorText" />
 
