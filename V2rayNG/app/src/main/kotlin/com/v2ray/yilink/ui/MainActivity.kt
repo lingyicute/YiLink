@@ -683,7 +683,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 startActivity(Intent(this, UserAssetActivity::class.java))
             }
             R.id.promotion -> {
-                Utils.openUri(this, "${Utils.decode(AppConfig.promotionUrl)}?t=${System.currentTimeMillis()}")
+                Utils.openUri(this, AppConfig.promotionUrl)
             }
             R.id.logcat -> {
                 startActivity(Intent(this, LogcatActivity::class.java))
