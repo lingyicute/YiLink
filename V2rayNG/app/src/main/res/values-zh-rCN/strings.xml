@@ -83,7 +83,7 @@
 
 
     <!-- PerAppProxyActivity -->
-    <string name="title_user_asset_add_url">添加资产网址</string>
+    <string name="title_user_asset_add_url">添加链接</string>
     <string name="msg_file_not_found">文件未找到</string>
     <string name="msg_remark_is_duplicate">备注已经存在</string>
     <string name="msg_dialog_progress">正在加载</string>
@@ -179,7 +179,7 @@
 
     <string name="title_core_loglevel">日志级别</string>
     <string name="title_mode">模式</string>
-    <string name="title_mode_help">点此查看更多帮助</string>
+    <string name="title_mode_help">（这是什么呢？我写在项目主页了～点击前往）</string>
     <string name="title_language">语言</string>
     <string name="title_ui_settings">用户界面设置</string>
 
@@ -189,7 +189,7 @@
     <string name="title_service_restart">重启服务</string>
     <string name="title_del_all_config">删除全部配置</string>
     <string name="title_del_duplicate_config">删除重复配置</string>
-    <string name="title_del_invalid_config">删除无效配置(先测试)</string>
+    <string name="title_del_invalid_config">删除无效配置(先测试，再点我～)</string>
     <string name="title_export_all">导出全部(非自定义)配置至剪贴板</string>
     <string name="title_sub_setting">订阅分组设置</string>
     <string name="sub_setting_remarks">备注</string>
@@ -209,7 +209,7 @@
     <string name="tasker_setting_confirm">确定</string>
 
     <string name="routing_settings_title">路由设置</string>
-    <string name="routing_settings_tips">用逗号(,)隔开，可以一行多个,记得保存</string>
+    <string name="routing_settings_tips">用逗号(,)隔开，可以一行多个，记得保存</string>
     <string name="routing_settings_save">保存</string>
     <string name="routing_settings_delete">清空</string>
     <string name="routing_settings_scan_replace">扫描并替换</string>
