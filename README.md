@@ -1,5 +1,6 @@
 # YiLink
-Made for my best Xyc～❤️
+## Made for my best Xyc～❤️
+![image](https://raw.githubusercontent.com/lingyicute/YiLink/master/logo.png)
 
 A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-core) and [v2fly core](https://github.com/v2fly/v2ray-core)
 
@@ -7,10 +8,6 @@ A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-cor
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.6.21-blue.svg)](https://kotlinlang.org)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lingyicute/YiLink)](https://github.com/lingyicute/YiLink/commits/master)
 [![GitHub Releases](https://img.shields.io/github/downloads/lingyicute/YiLink/latest/total?logo=github)](https://github.com/lingyicute/YiLink/releases)
-
-<a href="https://play.google.com/store/apps/details?id=com.v2ray.yilink">
-<img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="165" height="64" />
-</a>
 
 ### Usage
 
