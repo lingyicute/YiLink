@@ -63,33 +63,27 @@ jobs:
         rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.9.1_mips.apk
         rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.9.1_armeabi.apk
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: apk
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/
-          
     - name: Upload Aritfact (universal)
       uses: actions/upload-artifact@v4
       with:
         name: Debug Unsigned APK (universal) 
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*universal.apk
       
-      - name: Upload Aritfact (arm64-v8a)
-        uses: actions/upload-artifact@v4
-        with:
-          name: Debug Unsigned APK (arm64-v8a)
-          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*arm64-v8a.apk
+    - name: Upload Aritfact (arm64-v8a)
+      uses: actions/upload-artifact@v4
+      with:
+        name: Debug Unsigned APK (arm64-v8a)
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*arm64-v8a.apk
       
-      - name: Upload Aritfact (armeabi-v7a)
-        uses: actions/upload-artifact@v4
-        with:
-          name: Debug Unsigned APK (armeabi-v7a)
-          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*armeabi-v7a.apk
+    - name: Upload Aritfact (armeabi-v7a)
+      uses: actions/upload-artifact@v4
+      with:
+        name: Debug Unsigned APK (armeabi-v7a)
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*armeabi-v7a.apk
       
-      - name: Upload Aritfact (x86_64)
-        uses: actions/upload-artifact@v4
-        with:
-          name: Debug Unsigned APK (x86_64)
-          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*x86_64.apk
+    - name: Upload Aritfact (x86_64)
+      uses: actions/upload-artifact@v4
+      with:
+        name: Debug Unsigned APK (x86_64)
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*x86_64.apk
           
