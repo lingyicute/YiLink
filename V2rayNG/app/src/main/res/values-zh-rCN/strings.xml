@@ -175,7 +175,7 @@
     <string name="title_source_code">源代码</string>
     <string name="title_tg_channel">Telegram 频道</string>
     <string name="title_configuration_backup">备份配置</string>
-    <string name="summary_configuration_backup">存储位置: [%s], 卸载App或清除数据后备份将被清除</string>
+    <string name="summary_configuration_backup">存储位置：［%s］，由于系统限制，卸载App或清除数据后备份将被删除</string>
     <string name="title_configuration_restore">还原配置</string>
 
     <string name="title_pref_promotion">项目仓库</string>
