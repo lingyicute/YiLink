@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
+import com.v2ray.yilink.YilinkApplication.Companion.application
 import com.v2ray.yilink.AppConfig
 import com.v2ray.yilink.R
 import com.v2ray.yilink.databinding.ItemQrcodeBinding
@@ -144,10 +145,15 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                             .setPositiveButton(android.R.string.ok) { _, _ ->
                                 removeServer(guid, position)
                             }
+                            .setNegativeButton(android.R.string.no) {_, _ ->
+                                //do noting
+                            }
                             .show()
                     } else {
                         removeServer(guid, position)
                     }
+                } else {
+                    application.toast(R.string.toast_action_not_allowed)
                 }
             }
 
@@ -178,7 +184,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                 holder.itemFooterBinding.layoutEdit.visibility = View.INVISIBLE
             } else {
                 holder.itemFooterBinding.layoutEdit.setOnClickListener {
-                    Utils.openUri(mActivity, "${Utils.decode(AppConfig.promotionUrl)}?t=${System.currentTimeMillis()}")
+                    Utils.openUri(this, AppConfig.YiLinkUrl)
                 }
             }
         }

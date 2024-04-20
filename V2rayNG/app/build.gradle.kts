@@ -11,8 +11,8 @@ android {
         applicationId = "com.v2ray.yilink"
         minSdk = 21
         targetSdk = 34
-        versionCode = 560
-        versionName = "1.9.1"
+        versionCode = 569
+        versionName = "1.9.5"
         multiDexEnabled = true
     }
 
