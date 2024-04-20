@@ -76,7 +76,7 @@
     <string name="toast_invalid_url">无效的网址</string>
     <string name="server_lab_need_inbound">确保inbounds port和设置中的一致</string>
     <string name="toast_malformed_josn">配置格式错误</string>
-    <string name="server_lab_request_host6">Host(SNI)(可选)</string>
+    <string name="server_lab_request_host6">Host (SNI) (可选)</string>
     <string name="toast_asset_copy_failed">失败，请使用文件管理器</string>
     <string name="menu_item_add_file">添加文件</string>
     <string name="menu_item_download_file">下载文件</string>
@@ -136,7 +136,7 @@
     <string name="title_pref_routing_mode">预定义规则</string>
     <string name="title_pref_routing_custom">自定义规则</string>
 
-    <string name="title_pref_remote_dns">远程DNS (udp/tcp/https/quic)(可选)</string>
+    <string name="title_pref_remote_dns">远程DNS (udp/tcp/https/quic) (可选)</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
     <string name="title_pref_vpn_dns">VPN DNS (仅支持 IPv4/v6)</string>
@@ -175,7 +175,7 @@
     <string name="title_source_code">源代码</string>
     <string name="title_tg_channel">Telegram 频道</string>
     <string name="title_configuration_backup">备份配置</string>
-    <string name="summary_configuration_backup">存储位置：［%s］，由于系统限制，卸载App或清除数据后备份将被删除</string>
+    <string name="summary_configuration_backup">存储位置：［%s］, 由于系统限制, 卸载App或清除数据后备份将被删除</string>
     <string name="title_configuration_restore">还原配置</string>
 
     <string name="title_pref_promotion">项目仓库</string>
