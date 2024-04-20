@@ -184,7 +184,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                 holder.itemFooterBinding.layoutEdit.visibility = View.INVISIBLE
             } else {
                 holder.itemFooterBinding.layoutEdit.setOnClickListener {
-                    Utils.openUri(this, AppConfig.YiLinkUrl)
+                    Utils.openUri(mActivity, AppConfig.YiLinkUrl)
                 }
             }
         }
