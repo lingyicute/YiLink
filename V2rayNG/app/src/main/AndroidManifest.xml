@@ -36,7 +36,7 @@
 
 
     <application
-        android:name=".AngApplication"
+        android:name=".YilinkApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:banner="@mipmap/ic_banner"
@@ -174,8 +174,8 @@
                     android:resource="@xml/app_widget_provider" />
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.v2ray.ang.action.widget.click" />
-                <action android:name="com.v2ray.ang.action.activity" />
+                <action android:name="com.v2ray.yilink.action.widget.click" />
+                <action android:name="com.v2ray.yilink.action.activity" />
             </intent-filter>
         </receiver>
 
