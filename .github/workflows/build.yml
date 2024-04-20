@@ -58,10 +58,10 @@ jobs:
         
     - name: Remove useless
       run: |
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.9.1_riscv64.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.9.1_mips64.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.9.1_mips.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/YiLink_1.9.1_armeabi.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*riscv64.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*mips64.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*mips.apk
+        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*armeabi.apk
 
     - name: Upload Aritfact (universal)
       uses: actions/upload-artifact@v4
