@@ -80,6 +80,7 @@
     <string name="toast_asset_copy_failed">失败，请使用文件管理器</string>
     <string name="menu_item_add_file">添加文件</string>
     <string name="menu_item_download_file">下载文件</string>
+    <string name="toast_action_not_allowed">禁止此项操作</string>
 
 
     <!-- PerAppProxyActivity -->
@@ -135,7 +136,7 @@
     <string name="title_pref_routing_mode">预定义规则</string>
     <string name="title_pref_routing_custom">自定义规则</string>
 
-    <string name="title_pref_remote_dns">远程DNS (可选)</string>
+    <string name="title_pref_remote_dns">远程DNS (udp/tcp/https/quic)(可选)</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
     <string name="title_pref_vpn_dns">VPN DNS (仅支持 IPv4/v6)</string>
@@ -169,6 +170,13 @@
     <string name="summary_pref_feedback">反馈改进或漏洞至 GitHub</string>
     <string name="summary_pref_tg_group">加入Telegram Group</string>
     <string name="toast_tg_app_not_found">未找到Telegram app</string>
+    <string name="title_privacy_policy">隐私权政策</string>
+    <string name="title_about">关于</string>
+    <string name="title_source_code">源代码</string>
+    <string name="title_tg_channel">Telegram 频道</string>
+    <string name="title_configuration_backup">备份配置</string>
+    <string name="summary_configuration_backup">存储位置: [%s], 卸载App或清除数据后备份将被清除</string>
+    <string name="title_configuration_restore">还原配置</string>
 
     <string name="title_pref_promotion">项目仓库</string>
     <string name="summary_pref_promotion">项目仓库</string>
@@ -182,6 +190,7 @@
     <string name="title_mode_help">（这是什么呢？我写在项目主页了～点击前往）</string>
     <string name="title_language">语言</string>
     <string name="title_ui_settings">用户界面设置</string>
+    <string name="title_pref_ui_mode_night">界面颜色设置</string>
 
     <string name="title_logcat">Logcat</string>
     <string name="logcat_copy">复制</string>
@@ -264,6 +273,12 @@
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>仅代理</item>
+    </string-array>
+
+    <string-array name="ui_mode_night">
+        <item>跟随系统</item>
+        <item>浅色</item>
+        <item>深色</item>
     </string-array>
 
 </resources>

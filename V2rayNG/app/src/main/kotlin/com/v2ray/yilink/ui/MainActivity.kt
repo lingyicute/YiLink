@@ -1,49 +1,52 @@
 package com.v2ray.yilink.ui
 
 import android.Manifest
-import android.content.*
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.content.res.ColorStateList
 import android.net.Uri
 import android.net.VpnService
-import androidx.recyclerview.widget.LinearLayoutManager
-import android.view.Menu
-import android.view.MenuItem
-import com.tbruyelle.rxpermissions.RxPermissions
-import com.v2ray.yilink.R
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.KeyEvent
-import com.v2ray.yilink.AppConfig
-import android.content.res.ColorStateList
-import android.os.Build
-import com.google.android.material.navigation.NavigationView
-import androidx.core.content.ContextCompat
-import androidx.core.view.GravityCompat
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.recyclerview.widget.ItemTouchHelper
 import android.util.Log
+import android.view.KeyEvent
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.navigation.NavigationView
+import com.tbruyelle.rxpermissions.RxPermissions
 import com.tencent.mmkv.MMKV
+import com.v2ray.yilink.AppConfig
 import com.v2ray.yilink.AppConfig.YILINK_PACKAGE
-import com.v2ray.yilink.BuildConfig
+import com.v2ray.yilink.R
 import com.v2ray.yilink.databinding.ActivityMainBinding
 import com.v2ray.yilink.dto.EConfigType
 import com.v2ray.yilink.extension.toast
-import rx.Observable
-import rx.android.schedulers.AndroidSchedulers
-import java.util.concurrent.TimeUnit
 import com.v2ray.yilink.helper.SimpleItemTouchHelperCallback
 import com.v2ray.yilink.service.V2RayServiceManager
-import com.v2ray.yilink.util.*
+import com.v2ray.yilink.util.YilinkConfigManager
+import com.v2ray.yilink.util.MmkvManager
+import com.v2ray.yilink.util.Utils
 import com.v2ray.yilink.viewmodel.MainViewModel
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import me.drakeet.support.toast.ToastCompat
+import rx.Observable
+import rx.android.schedulers.AndroidSchedulers
 import java.io.File
 import java.io.FileOutputStream
+import java.util.concurrent.TimeUnit
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -104,11 +107,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         binding.navView.setNavigationItemSelectedListener(this)
-        "v${BuildConfig.VERSION_NAME} (${SpeedtestUtil.getLibVersion()})".also { binding.version.text = it }
+
 
         setupViewModel()
         copyAssets()
-        migrateLegacy()
+        //migrateLegacy()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             RxPermissions(this)
@@ -185,21 +188,21 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
 
-    private fun migrateLegacy() {
-        lifecycleScope.launch(Dispatchers.IO) {
-            val result = YilinkConfigManager.migrateLegacyConfig(this@MainActivity)
-            if (result != null) {
-                launch(Dispatchers.Main) {
-                    if (result) {
-                        toast(getString(R.string.migration_success))
-                        mainViewModel.reloadServerList()
-                    } else {
-                        toast(getString(R.string.migration_fail))
-                    }
-                }
-            }
-        }
-    }
+//    private fun migrateLegacy() {
+//        lifecycleScope.launch(Dispatchers.IO) {
+//            val result = YilinkConfigManager.migrateLegacyConfig(this@MainActivity)
+//            if (result != null) {
+//                launch(Dispatchers.Main) {
+//                    if (result) {
+//                        toast(getString(R.string.migration_success))
+//                        mainViewModel.reloadServerList()
+//                    } else {
+//                        toast(getString(R.string.migration_fail))
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     fun startV2Ray() {
         if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
@@ -326,6 +329,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                         MmkvManager.removeAllServer()
                         mainViewModel.reloadServerList()
                     }
+                    .setNegativeButton(android.R.string.no) {_, _ ->
+                        //do noting
+                    }
                     .show()
             true
         }
@@ -333,6 +339,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     mainViewModel.removeDuplicateServer()
+                }
+                .setNegativeButton(android.R.string.no) {_, _ ->
+                    //do noting
                 }
                 .show()
             true
@@ -342,6 +351,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     MmkvManager.removeInvalidServer()
                     mainViewModel.reloadServerList()
+                }
+                .setNegativeButton(android.R.string.no) {_, _ ->
+                    //do noting
                 }
                 .show()
             true
@@ -682,11 +694,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             R.id.user_asset_setting -> {
                 startActivity(Intent(this, UserAssetActivity::class.java))
             }
-            R.id.promotion -> {
-                Utils.openUri(this, AppConfig.promotionUrl)
-            }
             R.id.logcat -> {
                 startActivity(Intent(this, LogcatActivity::class.java))
+            }
+            R.id.about-> {
+                startActivity(Intent(this, AboutActivity::class.java))
             }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
