@@ -58,14 +58,14 @@ object YilinkConfigManager {
 //            if (context.isNullOrBlank()) {
 //                return null
 //            }
-//            val angConfig = Gson().fromJson(context, YilinkConfig::class.java)
-//            for (i in angConfig.vmess.indices) {
-//                upgradeServerVersion(angConfig.vmess[i])
+//            val yilinkConfig = Gson().fromJson(context, YilinkConfig::class.java)
+//            for (i in yilinkConfig.vmess.indices) {
+//                upgradeServerVersion(yilinkConfig.vmess[i])
 //            }
 //
 //            copyLegacySettings(defaultSharedPreferences)
-//            migrateVmessBean(angConfig, defaultSharedPreferences)
-//            migrateSubItemBean(angConfig)
+//            migrateVmessBean(yilinkConfig, defaultSharedPreferences)
+//            migrateSubItemBean(yilinkConfig)
 //
 //            defaultSharedPreferences.edit().remove(YILINK_CONFIG).apply()
 //            return true
@@ -113,8 +113,8 @@ object YilinkConfigManager {
 //        )
 //    }
 //
-//    private fun migrateVmessBean(angConfig: YilinkConfig, sharedPreferences: SharedPreferences) {
-//        angConfig.vmess.forEachIndexed { index, vmessBean ->
+//    private fun migrateVmessBean(yilinkConfig: YilinkConfig, sharedPreferences: SharedPreferences) {
+//        yilinkConfig.vmess.forEachIndexed { index, vmessBean ->
 //            val type = EConfigType.fromInt(vmessBean.configType) ?: return@forEachIndexed
 //            val config = ServerConfig.create(type)
 //            config.remarks = vmessBean.remarks
@@ -188,14 +188,14 @@ object YilinkConfigManager {
 //                }
 //            }
 //            val key = MmkvManager.encodeServerConfig(vmessBean.guid, config)
-//            if (index == angConfig.index) {
+//            if (index == yilinkConfig.index) {
 //                mainStorage?.encode(KEY_SELECTED_SERVER, key)
 //            }
 //        }
 //    }
 //
-//    private fun migrateSubItemBean(angConfig: YilinkConfig) {
-//        angConfig.subItem.forEach {
+//    private fun migrateSubItemBean(yilinkConfig: YilinkConfig) {
+//        yilinkConfig.subItem.forEach {
 //            val subItem = SubscriptionItem()
 //            subItem.remarks = it.remarks
 //            subItem.url = it.url
