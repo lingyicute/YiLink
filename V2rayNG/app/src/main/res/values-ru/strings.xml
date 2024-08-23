@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_widget_name">Переключить</string>
-    <string name="app_tile_name">Переключить</string>
+    <string name="app_widget_name">v2rayNG</string>
+    <string name="app_tile_name">v2rayNG</string>
     <string name="app_tile_first_use">Первое использование этой функции, пожалуйста, используйте приложение, чтобы добавить сервер</string>
     <string name="navigation_drawer_open">Открыть панель навигации</string>
     <string name="navigation_drawer_close">Закрыть панель навигации</string>
@@ -36,6 +36,7 @@
     <string name="menu_item_import_config_custom_url">Импорт из URL</string>
     <string name="menu_item_import_config_custom_url_scan">Импорт сканированием URL</string>
     <string name="del_config_comfirm">Подтверждаете удаление?</string>
+    <string name="del_invalid_config_comfirm">Выполните проверку перед удалением! Подтверждаете удаление?</string>
     <string name="server_lab_remarks">Описание</string>
     <string name="server_lab_address">Адрес</string>
     <string name="server_lab_port">Порт</string>
@@ -46,9 +47,25 @@
     <string name="server_lab_more_function">Другие параметры</string>
     <string name="server_lab_head_type">Тип заголовка</string>
     <string name="server_lab_mode_type">Режим gRPC</string>
-    <string name="server_lab_request_host">Запрос узла (WS/H2)/HTTPUpgrade/Шифрование QUIC/Полномочия gRPC</string>
-    <string name="server_lab_path">Путь (WS/H2)/HTTPUpgrade/Ключ QUIC/Сид KCP/Сервис gRPC</string>
+    <string name="server_lab_request_host">Узел</string>
+    <string name="server_lab_request_host_http">Узел HTTP</string>
+    <string name="server_lab_request_host_ws">Узел WS</string>
+    <string name="server_lab_request_host_httpupgrade">Узел HTTPUpgrade</string>
+    <string name="server_lab_request_host_splithttp">Узел SplitHTTP</string>
+    <string name="server_lab_request_host_h2">Узел H2</string>
+    <string name="server_lab_request_host_quic">Шифрование QUIC</string>
+    <string name="server_lab_request_host_grpc">Полномочия gRPC</string>
+    <string name="server_lab_path">Путь</string>
+    <string name="server_lab_path_ws">Путь WS</string>
+    <string name="server_lab_path_httpupgrade">Путь HTTPUpgrade</string>
+    <string name="server_lab_path_splithttp">Путь SplitHTTP</string>
+    <string name="server_lab_path_h2">Путь H2</string>
+    <string name="server_lab_path_quic">Ключ QUIC</string>
+    <string name="server_lab_path_kcp">Сид KCP</string>
+    <string name="server_lab_path_grpc">Служба gRPC</string>
     <string name="server_lab_stream_security">TLS</string>
+    <string name="server_lab_stream_fingerprint">Отпечаток</string>
+    <string name="server_lab_stream_alpn">ALPN</string>
     <string name="server_lab_allow_insecure">Разрешать небезопасные</string>
     <string name="server_lab_sni">SNI</string>
     <string name="server_lab_address3">Адрес</string>
@@ -59,6 +76,10 @@
     <string name="server_lab_security4">Пользователь (необязательно)</string>
     <string name="server_lab_encryption">Шифрование</string>
     <string name="server_lab_flow">Поток</string>
+    <string name="server_lab_public_key">PublicKey</string>
+    <string name="server_lab_short_id">ShortID</string>
+    <string name="server_lab_spider_x">SpiderX</string>
+    <string name="server_lab_secret_key">SecretKey</string>
     <string name="server_lab_reserved">Reserved (необязательно)</string>
     <string name="server_lab_local_address">Локальный адрес (необязательно, IPv4/IPv6 через запятую)</string>
     <string name="server_lab_local_mtu">MTU (необязательно, по умолчанию 1420)</string>
@@ -81,11 +102,13 @@
     <string name="menu_item_add_asset">Добавить ресурс</string>
     <string name="menu_item_add_file">Добавить файлы</string>
     <string name="menu_item_add_url">Добавить URL</string>
+    <string name="title_url">URL</string>
     <string name="menu_item_download_file">Загрузить файлы</string>
     <string name="title_user_asset_add_url">Добавить URL ресурса</string>
     <string name="msg_file_not_found">Файл не найден</string>
     <string name="msg_remark_is_duplicate">Описание уже существует</string>
     <string name="toast_action_not_allowed">Это действие запрещено</string>
+
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">Загрузка…</string>
@@ -122,7 +145,9 @@
     <string name="summary_pref_speed_enabled">Показывать текущую скорость в уведомлении.\nЗначок будет меняться в зависимости от использования.</string>
 
     <string name="title_pref_sniffing_enabled">Анализ пакетов</string>
-    <string name="summary_pref_sniffing_enabled">Использовать анализ пакетов (по умолчанию включено)</string>
+    <string name="summary_pref_sniffing_enabled">Использовать определение доменных имён в пакетах (по умолчанию включено)</string>
+    <string name="title_pref_route_only_enabled">Домен только для маршрутизации</string>
+    <string name="summary_pref_route_only_enabled">Использовать определённое доменное имя только для маршрутизации и сохранять целевой адрес в виде IP.</string>
 
     <string name="title_pref_local_dns_enabled">Использовать локальную DNS</string>
     <string name="summary_pref_local_dns_enabled">Обслуживание выполняется DNS-модулем ядра (в настройках маршрутизации рекомендуется выбрать режим «Все, кроме LAN и Китая»)</string>
@@ -145,6 +170,9 @@
 
     <string name="title_pref_domestic_dns">Внутренняя DNS (необязательно)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
+
+    <string name="title_pref_delay_test_url">Сервис проверки времени отклика (HTTP/HTTPS)</string>
+    <string name="summary_pref_delay_test_url">URL</string>
 
     <string name="title_pref_proxy_sharing_enabled">Разрешать подключения из LAN</string>
     <string name="summary_pref_proxy_sharing_enabled">Другие устройства могут подключаться, используя ваш IP-адрес, чтобы использовать прокси по протоколам SOCKS/HTTP. Используйте только в доверенной сети, чтобы избежать несанкционированного подключения.</string>
@@ -172,13 +200,14 @@
     <string name="summary_pref_feedback">Предложить улучшение или сообщить об ошибке на GitHub</string>
     <string name="summary_pref_tg_group">Присоединиться к группе в Telegram</string>
     <string name="toast_tg_app_not_found">Приложение Telegram не найдено</string>
-    <string name="title_privacy_policy">Конфиденциальность</string>
+    <string name="title_privacy_policy">Политика конфиденциальности</string>
     <string name="title_about">О приложении</string>
     <string name="title_source_code">Исходный код</string>
     <string name="title_tg_channel">Telegram-канал</string>
-    <string name="title_configuration_backup">Резервирование</string>
+    <string name="title_configuration_backup">Резервирование конфигурации</string>
     <string name="summary_configuration_backup">Путь: [%s]. Резервная копия будет стёрта при удалении приложения или очистке хранилища.</string>
-    <string name="title_configuration_restore">Восстановление</string>
+    <string name="title_configuration_restore">Восстановление конфигурации</string>
+    <string name="title_configuration_share">Поделиться конфигурацией</string>
 
     <string name="title_pref_promotion">Содействие</string>
     <string name="summary_pref_promotion">Содействие, нажмите для получения подробной информации (пожертвование может быть удалено)</string>
@@ -198,18 +227,18 @@
     <string name="logcat_copy">Копировать</string>
     <string name="logcat_clear">Очистить</string>
     <string name="title_service_restart">Перезапуск службы</string>
-    <string name="title_del_all_config">Удалить все профили</string>
-    <string name="title_del_duplicate_config">Удалить дубликаты профилей</string>
-    <string name="title_del_invalid_config">Удалить нерабочие профили (после проверки)</string>
-    <string name="title_export_all">Экспорт всех профилей в буфер обмена</string>
+    <string name="title_del_all_config">Удалить профили группы</string>
+    <string name="title_del_duplicate_config">Удалить дубликаты профилей группы</string>
+    <string name="title_del_invalid_config">Удалить нерабочие профили группы</string>
+    <string name="title_export_all">Экспорт профилей группы в буфер обмена</string>
     <string name="title_sub_setting">Группы</string>
     <string name="sub_setting_remarks">Название</string>
     <string name="sub_setting_url">URL (необязательно)</string>
     <string name="sub_setting_enable">Использовать обновление</string>
     <string name="sub_auto_update">Использовать автоматическое обновление</string>
-    <string name="title_sub_update">Обновить подписку</string>
-    <string name="title_ping_all_server">Проверка доступности профилей</string>
-    <string name="title_real_ping_all_server">Время отклика профилей</string>
+    <string name="title_sub_update">Обновить подписку группы</string>
+    <string name="title_ping_all_server">Проверка профилей группы</string>
+    <string name="title_real_ping_all_server">Время отклика профилей группы</string>
     <string name="title_user_asset_setting">Файлы георесурсов</string>
     <string name="title_sort_by_test_results">Сортировка по результатам теста</string>
     <string name="title_filter_config">Фильтр групп</string>

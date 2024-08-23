@@ -26,6 +26,7 @@
         <item>kcp</item>
         <item>ws</item>
         <item>httpupgrade</item>
+        <item>splithttp</item>
         <item>h2</item>
         <item>quic</item>
         <item>grpc</item>
@@ -48,7 +49,7 @@
     <string-array name="mode_type_grpc" translatable="false">
         <item>gun</item>
         <item>multi</item>
- <!--Hide this option until core support it       <item>guna</item>-->
+        <!--Hide this option until core support it       <item>guna</item>-->
     </string-array>
 
     <string-array name="streamsecuritys" translatable="false">
@@ -177,6 +178,7 @@
         <item>Русский</item>
         <item>فارسی</item>
         <item>عربي</item>
+        <item>বাংলা</item>
     </string-array>
 
 
@@ -189,6 +191,7 @@
         <item>ru</item>
         <item>fa</item>
         <item>ar</item>
+        <item>bn</item>
     </string-array>
 
     <string-array name="mux_xudp_quic_value" translatable="false">

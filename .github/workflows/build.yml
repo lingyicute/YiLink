@@ -47,7 +47,7 @@ jobs:
         go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
         gomobile init
         go mod tidy -v
-        gomobile bind -v -androidapi 19 -ldflags='-s -w' ./
+        gomobile bind -v -androidapi 21 -ldflags='-s -w' ./
         cp *.aar ${{ github.workspace }}/V2rayNG/app/libs/
 
     - name: Build APK
@@ -55,35 +55,9 @@ jobs:
         cd ${{ github.workspace }}/V2rayNG
         chmod 755 gradlew
         ./gradlew assembleDebug
-        
-    - name: Remove useless
-      run: |
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*riscv64.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*mips64.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*mips.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*armeabi.apk
 
-    - name: Upload Aritfact (universal)
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: Debug Unsigned APK (universal) 
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*all.apk
-      
-    - name: Upload Aritfact (arm64-v8a)
-      uses: actions/upload-artifact@v4
-      with:
-        name: Debug Unsigned APK (arm64-v8a)
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*arm64-v8a.apk
-      
-    - name: Upload Aritfact (armeabi-v7a)
-      uses: actions/upload-artifact@v4
-      with:
-        name: Debug Unsigned APK (armeabi-v7a)
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*armeabi-v7a.apk
-      
-    - name: Upload Aritfact (x86_64)
-      uses: actions/upload-artifact@v4
-      with:
-        name: Debug Unsigned APK (x86_64)
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*x86_64.apk
-          
+        name: apk
+        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/
