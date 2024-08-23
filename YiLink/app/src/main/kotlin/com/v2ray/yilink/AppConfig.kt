@@ -95,10 +95,10 @@ object AppConfig {
         "https://raw.githubusercontent.com/2dust/androidpackagenamelist/master/proxy.txt"
     const val v2rayCustomRoutingListUrl =
         "https://raw.githubusercontent.com/2dust/v2rayCustomRoutingList/master/"
-    const val YiLinkUrl = "https://github.com/2dust/YiLink"
+    const val YiLinkUrl = "https://github.com/lingyicute/YiLink"
     const val YiLinkIssues = "$YiLinkUrl/issues"
     const val YiLinkWikiMode = "$YiLinkUrl/wiki/Mode"
-    const val YiLinkPrivacyPolicy = "https://raw.githubusercontent.com/2dust/YiLink/master/CR.md"
+    const val YiLinkPrivacyPolicy = "https://raw.githubusercontent.com/lingyicute/YiLink/master/CR.md"
     const val PromotionUrl = "aHR0cHM6Ly85LjIzNDQ1Ni54eXovYWJjLmh0bWw="
     const val GeoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/"
     const val TgChannelUrl = "https://t.me/github_2dust"
