@@ -11,8 +11,8 @@ android {
         applicationId = "com.v2ray.yilink"
         minSdk = 21
         targetSdk = 34
-        versionCode = 583
-        versionName = "1.8.38"
+        versionCode = 592
+        versionName = "1.9.19"
         multiDexEnabled = true
         splits {
             abi {
