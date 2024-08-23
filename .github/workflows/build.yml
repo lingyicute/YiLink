@@ -48,42 +48,42 @@ jobs:
         gomobile init
         go mod tidy -v
         gomobile bind -v -androidapi 21 -ldflags='-s -w' ./
-        cp *.aar ${{ github.workspace }}/V2rayNG/app/libs/
+        cp *.aar ${{ github.workspace }}/YiLink/app/libs/
 
     - name: Build APK
       run: |
-        cd ${{ github.workspace }}/V2rayNG
+        cd ${{ github.workspace }}/YiLink
         chmod 755 gradlew
         ./gradlew assembleDebug
         
     - name: Remove useless
       run: |
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*riscv64.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*mips64.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*mips.apk
-        rm ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*armeabi.apk
+        rm ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*riscv64.apk
+        rm ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*mips64.apk
+        rm ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*mips.apk
+        rm ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*armeabi.apk
 
     - name: Upload Aritfact (universal)
       uses: actions/upload-artifact@v4
       with:
         name: Debug Unsigned APK (universal) 
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*all.apk
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*all.apk
       
     - name: Upload Aritfact (arm64-v8a)
       uses: actions/upload-artifact@v4
       with:
         name: Debug Unsigned APK (arm64-v8a)
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*arm64-v8a.apk
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*arm64-v8a.apk
       
     - name: Upload Aritfact (armeabi-v7a)
       uses: actions/upload-artifact@v4
       with:
         name: Debug Unsigned APK (armeabi-v7a)
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*armeabi-v7a.apk
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*armeabi-v7a.apk
       
     - name: Upload Aritfact (x86_64)
       uses: actions/upload-artifact@v4
       with:
         name: Debug Unsigned APK (x86_64)
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/debug/*x86_64.apk
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*x86_64.apk
           
