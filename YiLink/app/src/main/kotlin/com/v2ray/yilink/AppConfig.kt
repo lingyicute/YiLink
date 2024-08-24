@@ -52,7 +52,6 @@ object AppConfig {
     const val PREF_ALLOW_INSECURE = "pref_allow_insecure"
     const val PREF_SOCKS_PORT = "pref_socks_port"
     const val PREF_HTTP_PORT = "pref_http_port"
-
     const val PREF_REMOTE_DNS = "pref_remote_dns"
     const val PREF_DOMESTIC_DNS = "pref_domestic_dns"
     const val PREF_DELAY_TEST_URL = "pref_delay_test_url"
@@ -96,14 +95,14 @@ object AppConfig {
     const val v2rayCustomRoutingListUrl =
         "https://raw.githubusercontent.com/2dust/v2rayCustomRoutingList/master/"
     const val YiLinkUrl = "https://github.com/lingyicute/YiLink"
-    const val YiLinkIssues = "$YiLinkUrl/issues"
-    const val YiLinkWikiMode = "$YiLinkUrl/wiki/Mode"
-    const val YiLinkPrivacyPolicy = "https://raw.githubusercontent.com/lingyicute/YiLink/master/CR.md"
-    const val PromotionUrl = "aHR0cHM6Ly85LjIzNDQ1Ni54eXovYWJjLmh0bWw="
+    const val YiLinkIssues = "https://github.com/lingyicute/YiLink/issues"
+    const val YiLinkWikiMode = "https://github.com/lingyicute/YiLink"
+    const val YiLinkPrivacyPolicy = "https://github.com/lingyicute/YiLink/blob/master/CR.md"
+    const val geoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/"
     const val GeoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/"
-    const val TgChannelUrl = "https://t.me/github_2dust"
     const val DelayTestUrl = "https://www.gstatic.com/generate_204"
     const val DelayTestUrl2 = "https://www.google.com/generate_204"
+    const val TgChannelUrl = "https://t.me/lyi_channel"
 
     /** DNS server addresses. */
     const val DNS_PROXY = "1.1.1.1"
