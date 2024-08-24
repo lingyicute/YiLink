@@ -54,6 +54,7 @@ jobs:
       run: |
         cd ${{ github.workspace }}/YiLink
         chmod 755 gradlew
+        ./gradlew clean
         ./gradlew assembleDebug
 
     - name: Tree
