@@ -55,6 +55,9 @@ jobs:
         cd ${{ github.workspace }}/YiLink
         chmod 755 gradlew
         ./gradlew assembleDebug
+
+    - name: Tree
+      run: tree -ash \${{ github.workspace }}/YiLink/app/build/outputs/apk/
         
     - name: Remove useless
       run: |
