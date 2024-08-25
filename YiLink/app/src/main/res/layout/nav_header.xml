@@ -19,7 +19,8 @@
         android:gravity="center"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="@string/app_namech"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorText" />
 
     <TextView 
         android:layout_width="wrap_content" 
@@ -29,6 +30,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/xyc"
         android:fontFamily="@font/xyc"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"  />
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" 
+        android:textColor="@color/colorText" />
 
 </LinearLayout>
