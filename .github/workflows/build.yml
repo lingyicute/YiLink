@@ -55,7 +55,7 @@ jobs:
         cd ${{ github.workspace }}/YiLink
         chmod 755 gradlew
         ./gradlew clean
-        ./gradlew assembleDebug
+        ./gradlew assembleRelease
 
     - name: Tree
       run: tree -ash \${{ github.workspace }}/YiLink/app/build/outputs/apk/
