@@ -63,24 +63,24 @@ jobs:
     - name: Upload Aritfact (universal)
       uses: actions/upload-artifact@v4
       with:
-        name: Debug Unsigned APK (universal) 
-        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*universal.apk
+        name: release Unsigned APK (universal) 
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/release/*universal.apk
       
     - name: Upload Aritfact (arm64-v8a)
       uses: actions/upload-artifact@v4
       with:
-        name: Debug Unsigned APK (arm64-v8a)
-        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*arm64-v8a.apk
+        name: release Unsigned APK (arm64-v8a)
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/release/*arm64-v8a.apk
       
     - name: Upload Aritfact (armeabi-v7a)
       uses: actions/upload-artifact@v4
       with:
-        name: Debug Unsigned APK (armeabi-v7a)
-        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*armeabi-v7a.apk
+        name: release Unsigned APK (armeabi-v7a)
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/release/*armeabi-v7a.apk
       
     - name: Upload Aritfact (x86_64)
       uses: actions/upload-artifact@v4
       with:
-        name: Debug Unsigned APK (x86_64)
-        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/debug/*x86_64.apk
+        name: release Unsigned APK (x86_64)
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/release/*x86_64.apk
           
