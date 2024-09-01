@@ -7,6 +7,7 @@ A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-cor
 [![API](https://img.shields.io/badge/API-21%2B-yellow.svg?style=flat)](https://developer.android.com/about/versions/lollipop)
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.9.23-blue.svg)](https://kotlinlang.org)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lingyicute/YiLink)](https://github.com/lingyicute/YiLink/commits/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/lingyicute/yilink/badge)](https://www.codefactor.io/repository/github/lingyicute/yilink)
 [![GitHub Releases](https://img.shields.io/github/downloads/lingyicute/YiLink/latest/total?logo=github)](https://github.com/lingyicute/YiLink/releases)
 
 ### Usage
