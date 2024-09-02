@@ -10,6 +10,10 @@ A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-cor
 [![CodeFactor](https://www.codefactor.io/repository/github/lingyicute/yilink/badge)](https://www.codefactor.io/repository/github/lingyicute/yilink)
 [![GitHub Releases](https://img.shields.io/github/downloads/lingyicute/YiLink/latest/total?logo=github)](https://github.com/lingyicute/YiLink/releases)
 
+### Release
+
+#### [Latest release](https://raw.githubusercontent.com/lingyicute/YiLink/master/apk-releases/latest.apk)
+
 ### Usage
 
 #### Geoip and Geosite
@@ -22,10 +26,10 @@ A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-cor
 ![image](https://raw.githubusercontent.com/lingyicute/YiLink/master/vpn-mode.jpg)
 
 #### Proxy only Mode
-✔️ One less DNS, might be faster
-✔️ Less processing means less battery usage, less memory usage
-✔️ Other apps can take system VPN
-🔴 Need manual configuration
+- ✔️ One less DNS, might be faster
+- ✔️ Less processing means less battery usage, less memory usage
+- ✔️ Other apps can take system VPN
+- 🔴 Need manual configuration
 
 ### Development guide
 
