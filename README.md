@@ -1,5 +1,5 @@
 # YiLink
-### Made for My Best Xyc～❤️
+## Made for My Best Xyc～❤️
 ![image](https://raw.githubusercontent.com/lingyicute/YiLink/master/logo.png)
 
 A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-core) and [v2fly core](https://github.com/v2fly/v2ray-core)
@@ -10,22 +10,23 @@ A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-cor
 [![CodeFactor](https://www.codefactor.io/repository/github/lingyicute/yilink/badge)](https://www.codefactor.io/repository/github/lingyicute/yilink)
 [![GitHub Releases](https://img.shields.io/github/downloads/lingyicute/YiLink/latest/total?logo=github)](https://github.com/lingyicute/YiLink/releases)
 
-### Release
+## Release
 
-#### [Latest release](https://raw.githubusercontent.com/lingyicute/YiLink/master/apk-releases/latest.apk)
+### [Latest release arm64](https://raw.githubusercontent.com/lingyicute/YiLink/master/apk-releases/latest.apk)
+### [Latest release armeabi](https://raw.githubusercontent.com/lingyicute/YiLink/master/apk-releases/latest-32.apk)
 
-### Usage
+## Usage
 
-#### Geoip and Geosite
+### Geoip and Geosite
 - geoip.dat and geosite.dat files are in `Android/data/com.v2ray.yilink/files/assets` (path may differ on some Android device)
 - download feature will get enhanced version in this [repo](https://github.com/Loyalsoldier/v2ray-rules-dat) (Note it need a working proxy)
 - latest official [domain list](https://github.com/v2fly/domain-list-community) and [ip list](https://github.com/v2fly/geoip) can be imported manually
 - possible to use third party dat file in the same folder, like [h2y](https://guide.v2fly.org/routing/sitedata.html#%E5%A4%96%E7%BD%AE%E7%9A%84%E5%9F%9F%E5%90%8D%E6%96%87%E4%BB%B6)
 
-#### VPN Mode
+### VPN Mode
 ![image](https://raw.githubusercontent.com/lingyicute/YiLink/master/vpn-mode.jpg)
 
-#### Proxy only Mode
+### Proxy only Mode
 - ✔️ One less DNS, might be faster
 - ✔️ Less processing means less battery usage, less memory usage
 - ✔️ Other apps can take system VPN
