@@ -33,23 +33,21 @@ jobs:
         go install golang.org/x/mobile/cmd/gomobile@latest
         echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
-
     - name: Setup Android environment
       uses: android-actions/setup-android@v3
 
-
-- name: Build dependencies
-  run: |
-    mkdir -p ${{ github.workspace }}/build
-    cd ${{ github.workspace }}/build
-    git clone --depth=1 -b main https://github.com/2dust/AndroidLibXrayLite.git
-    cd AndroidLibXrayLite
-    go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
-    go mod tidy -v
-    go mod download
-    gomobile init
-    gomobile bind -v -androidapi 21 -ldflags='-s -w' ./
-    cp *.aar ${{ github.workspace }}/YiLink/app/libs/
+    - name: Build dependencies
+      run: |
+        mkdir -p ${{ github.workspace }}/build
+        cd ${{ github.workspace }}/build
+        git clone --depth=1 -b main https://github.com/2dust/AndroidLibXrayLite.git
+        cd AndroidLibXrayLite
+        go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
+        go mod tidy -v
+        go mod download
+        gomobile init
+        gomobile bind -v -androidapi 21 -ldflags='-s -w' ./
+        cp *.aar ${{ github.workspace }}/YiLink/app/libs/
 
     - name: Build APK
       run: |
