@@ -38,17 +38,18 @@ jobs:
       uses: android-actions/setup-android@v3
 
 
-    - name: Build dependencies
-      run: |
-        mkdir ${{ github.workspace }}/build
-        cd ${{ github.workspace }}/build
-        git clone --depth=1 -b main https://github.com/2dust/AndroidLibXrayLite.git
-        cd AndroidLibXrayLite
-        go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
-        gomobile init
-        go mod tidy -v
-        gomobile bind -v -androidapi 21 -ldflags='-s -w' ./
-        cp *.aar ${{ github.workspace }}/YiLink/app/libs/
+- name: Build dependencies
+  run: |
+    mkdir -p ${{ github.workspace }}/build
+    cd ${{ github.workspace }}/build
+    git clone --depth=1 -b main https://github.com/2dust/AndroidLibXrayLite.git
+    cd AndroidLibXrayLite
+    go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
+    go mod tidy -v
+    go mod download
+    gomobile init
+    gomobile bind -v -androidapi 21 -ldflags='-s -w' ./
+    cp *.aar ${{ github.workspace }}/YiLink/app/libs/
 
     - name: Build APK
       run: |
@@ -56,10 +57,13 @@ jobs:
         chmod 755 gradlew
         ./gradlew clean
         ./gradlew assembleRelease
-
-    - name: Tree
-      run: tree -ash \${{ github.workspace }}/YiLink/app/build/outputs/apk/
-        
+    
+    - name: Upload Aritfact
+      uses: actions/upload-artifact@v4
+      with:
+        name: release Unsigned APK (universal) 
+        path: ${{ github.workspace }}/YiLink/app/build/outputs/apk/release/
+      
     - name: Upload Aritfact (universal)
       uses: actions/upload-artifact@v4
       with:
